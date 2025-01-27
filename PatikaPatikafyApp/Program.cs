@@ -42,7 +42,7 @@ public class Program
         {
             foreach (var artist in group)
             {
-                Console.WriteLine(artist.NameSurname);
+                Console.WriteLine(artist.ReleaseYear + " - " + artist.NameSurname);
             }
         }
 
@@ -63,8 +63,6 @@ public class Program
         Console.WriteLine("Oldest artist:");
         var oldestArtist = artists.OrderBy(artist => artist.ReleaseYear).First();
         Console.WriteLine(oldestArtist.NameSurname);
-
-        
 
     }
 }
