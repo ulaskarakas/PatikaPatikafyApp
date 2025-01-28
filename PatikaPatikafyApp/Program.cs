@@ -40,9 +40,11 @@ public class Program
         var popAndBefore2000Group = artists.Where(artist => artist.ReleaseYear < 2000 && artist.Genre.Contains("Pop")).OrderBy(artist => artist.NameSurname).GroupBy(artist => artist.ReleaseYear);
         foreach (var group in popAndBefore2000Group)
         {
+            Console.WriteLine(group.Key);
+
             foreach (var artist in group)
             {
-                Console.WriteLine(artist.ReleaseYear + " - " + artist.NameSurname);
+                Console.WriteLine(" " + artist.NameSurname);
             }
         }
 
